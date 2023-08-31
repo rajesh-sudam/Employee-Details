@@ -1,0 +1,20 @@
+<table class="data">
+    <thead>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>PHONE_NO</th>
+        <!-- <th>Images</th> -->
+        <th>EDIT</th>
+        <th>DELETE</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of temp | async">
+            <td (click)="byId(t.id)">{{t.name}}</td>
+            <td>{{t.email}}</td>
+            <td>{{t.phone_no}}</td>
+            <!-- <td>{{t.images}}</td> -->
+            <td><button class="button"(click)="edit(t.id)">EDIT</button></td>
+            <td><button class="button1" (click)="delete(t.id)">DELETE</button></td>
+        </tr>
+    </tbody>
+</table>

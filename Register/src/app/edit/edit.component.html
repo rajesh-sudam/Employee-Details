@@ -1,0 +1,25 @@
+<div class="heading">
+    <h3>UPDATE PROFILE</h3>
+  </div>
+<div class="container">
+    <form [formGroup]="frmEdit" (ngSubmit)="OnSubmit()">
+   <div class="form=group">
+     <label for="name">Name :</label><br>
+     <input type="text" class="form-control" id="name"formControlName="name">
+     <span class="icons" *ngIf="frmEdit.controls['name'].errors && !frmEdit.controls['name'].pristine"></span></div>
+   <br><br>
+     <div class="form-group">
+       <label for="email">Email :</label><br>
+       <input type="text" class="form-control"id="email"formControlName="email">
+       <span class="icons"*ngIf="frmEdit.controls['email'].errors && !frmEdit.controls['email'].pristine"></span>
+       </div><br><br>
+         <div class="form-group">
+           <label for="phone_no">Phone_No :</label><br>
+           <input type="text" class="form-control"id="phone_no"formControlName="phone_no">
+           <span class="icons"*ngIf="frmEdit.controls['phone_no'].errors && !frmEdit.controls['phone_no'].pristine"></span>
+           </div><br><br>
+           <div class="button">
+             <button type="submit" class="button1" (click)="success()" [disabled]="!frmEdit.valid">submit</button>&nbsp;&nbsp;
+           </div>
+   </form><br> 
+ </div>
